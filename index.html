@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+
+  <title>Ashter Haider</title>
+
+  <!-- Tailwind output CSS -->
+  <link rel="stylesheet" href="css/output.css">
+  <meta http-equiv="cleartype" content="on">
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Custom scripts -->
+  <script src="js/scripts.js"></script>
+</head>
+
+<body class="dark:bg-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col">
+  <header class="w-full shadow-sm bg-white dark:bg-gray-800 dark:text-gray-100">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <nav class="flex justify-between items-center w-full">
+        <!-- Since this is your homepage, link to index.html -->
+        <a href="index.html" class="text-2xl font-bold hover:underline">
+          Ashter Haider
+        </a>
+
+        <!-- Convert "?page=..." to .html links -->
+        <ul class="flex space-x-4">
+          <li><a class="hover:underline" href="index.html">Home</a></li>
+          <li><a class="hover:underline" href="projects.html">Projects</a></li>
+          <li><a class="hover:underline" href="ai-work.html">AI Work</a></li>
+          <li><a class="hover:underline" href="writings.html">Writings</a></li>
+          <li><a class="hover:underline" href="https://twitter.com/ashter_haider">Twitter</a></li>
+          <li><a class="hover:underline" href="resume.html">Resume</a></li>
+          <li><a class="hover:underline" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-grow">
+    <div class="max-w-4xl mx-auto px-6 py-8">
+      <!-- About Me Section -->
+      <section id="about-me">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <div class="text-lg leading-relaxed mb-4">
+          <p>
+            I'm a CRO specialist and AI enthusiast based in Pakistan. 
+            My work combines creativity, technical expertise, and data-driven approaches to help 
+            businesses optimize their conversion rates and create seamless user experiences.
+          </p>
+          <p class="mt-4">
+            My journey into the tech world began with a deep curiosity about problem-solving and 
+            storytelling. Alongside my professional pursuits, I am dedicated to building AI tools, 
+            exploring the art of storytelling, and developing personal projects to make a tangible 
+            impact. As an ambitious solo entrepreneur, I thrive on learning by doing and continuously 
+            pushing my limits.
+          </p>
+          <p class="mt-4">
+            Beyond work, I enjoy diving into books on psychology, decision-making, and history, as 
+            well as studying great storytellers like Dave Chappelle and Joseph Campbell. I believe 
+            in leveraging hard work, discipline, and creativity to achieve meaningful results.
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div class="flex justify-start mt-8">
+          <!-- Make sure this path matches your actual file structure -->
+          <img 
+            src="assets/images/ashter_site.jpg" 
+            alt="Ashter Haider"
+            class="rounded-lg shadow-md w-full md:w-2/3"
+          >
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <footer class="dark py-4 mt-8 border-t border-white dark:border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 text-sm text-gray-500">
+      © 2025 Ashter Haider. Built with php, tailwind, sqlite, html and jquery.
+    </div>
+  </footer>
+</body>
+</html>
