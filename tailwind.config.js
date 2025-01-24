@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    // Now reference your .html files instead of .php
     './*.html',
-    './**/*.html',  // if you have pages in subfolders
+    './**/*.html',  
     './js/**/*.js'
   ],
   theme: {
