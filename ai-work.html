@@ -240,7 +240,7 @@
 </div>
 
       <script>
-      // filepath: /Users/ashterhaider/Downloads/build/personal-site/ai-work.html
+      // /Downlo
       document.addEventListener('DOMContentLoaded', function() {
         const mainImage = document.getElementById('mainImage');
         const prevBtn = document.getElementById('prevBtn');
@@ -248,29 +248,21 @@
         const thumbnailStrip = document.getElementById('thumbnailStrip');
         
         // Create array with both JPG and PNG paths
-        javascript
-const images = Array.from({length: 30}, (_, i) => {
+        const images = Array.from({length: 30}, (_, i) => {
     const index = i + 1;
-    const possibleExtensions = ['jpg', 'JPG', 'png', 'PNG'];
+    const extensions = ['jpg', 'JPG', 'png', 'PNG'];
     
     return new Promise(resolve => {
-        // Try each possible extension
-        const tryNextExtension = (extensions) => {
-            if (extensions.length === 0) {
-                resolve(null);
-                return;
-            }
+        const tryLoad = (extIndex) => {
+            if (extIndex >= extensions.length) return resolve(null); // No match
             
-            const ext = extensions[0];
-            const imagePath = `assets/images/AI/AI${index}.${ext}`;
-            
+            const path = `assets/images/AI/AI${index}.${extensions[extIndex]}`;
             const img = new Image();
-            img.onload = () => resolve(imagePath);
-            img.onerror = () => tryNextExtension(extensions.slice(1));
-            img.src = imagePath;
+            img.onload = () => resolve(path);
+            img.onerror = () => tryLoad(extIndex + 1); // Try next extension
+            img.src = path;
         };
-        
-        tryNextExtension(possibleExtensions);
+        tryLoad(0); // Start checking extensions
     });
 });
     
