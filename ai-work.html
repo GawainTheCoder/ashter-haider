@@ -62,11 +62,6 @@
           class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >Resume</a
         >
-        <a
-          href="contact.html"
-          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >Contact</a
-        >
       </nav>
 
       <!-- Mobile Menu Trigger -->
@@ -134,12 +129,6 @@
           >
             Resume
           </a>
-          <a
-            href="contact.html"
-            class="py-2 px-3 text-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors"
-          >
-            Contact
-          </a>
         </div>
       </div>
 
@@ -154,22 +143,186 @@
   <!-- Main Content Container -->
   <main class="flex-grow pt-10">
     <div class="max-w-6xl mx-auto px-4 py-10">
-      <h2 class="text-3xl font-bold mb-4">AI & Alignment Work</h2>
-      <p class="text-gray-300 mb-6">
-        Discuss your AI-related studies, your alignment concerns, or provide a research summary. 
+      <h2 class="text-3xl font-bold mb-4">AI Work</h2>
+        <div class="max-w-6xl mx-auto px-4 py-4">
+        <h2 class="text-2xl font-bold mb-4">AI Photography</h2>
+        <p class="text-gray-300">
+          Fine-tuned AI models to generate realistic, product & model images.
+        </p>
+        <!-- Image Slider Container -->
+        <section class="py-14">
+
+        <div class="relative w-full h-[500px] mb-8" id="imageSlider">
+          <!-- Main Image -->
+          <div class="relative w-full h-full">
+            <img id="mainImage" src="assets/images/AI/AI1.jpg" alt="AI Work" 
+                 class="w-full h-full object-cover rounded-lg shadow-xl">
+            
+            <!-- Navigation Arrows -->
+            <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Thumbnail Strip -->
+          <div class="mt-4 flex space-x-2 overflow-x-auto pb-2" id="thumbnailStrip">
+            <!-- Thumbnails will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- SaaS -->
+<section class="py-4">
+
+  <div class="max-w-6xl mx-auto px-4">
+    <div 
+      class="relative bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500 text-white 
+                 p-8 rounded-lg shadow-lg overflow-hidden"
+    >
+      <!-- Optional semi-transparent overlay for extra style -->
+      <div class="absolute inset-0 bg-black bg-opacity-30 pointer-events-none"></div>
+  
+      <div class="relative z-10">
+        <h3 class="text-2xl md:text-3xl font-bold mb-2">
+          Developing a SaaS Tool for E-commerce
+        </h3>
+        <span class="inline-block bg-white bg-opacity-20 text-sm px-3 py-1 rounded-full mb-4">
+          Coming Soon
+        </span>
+        <p class="mb-2 text-gray-100 leading-relaxed">
+          A platform that lets e-commerce brands generate high-quality, realistic fashion models and 
+          clothing imagery using open-source AI models via APIs. Revolutionize product 
+          photography and reduce costs—stay tuned for launch!
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Agent -->
+<section class="py-2">
+
+<div class="max-w-6xl mx-auto px-4">
+  <div 
+    class="relative bg-gradient-to-r from-indigo-700 via-indigo-600 to-indigo-500 text-white 
+               p-8 rounded-lg shadow-lg overflow-hidden"
+  >
+    <!-- Optional semi-transparent overlay for extra style -->
+    <div class="absolute inset-0 bg-black bg-opacity-30 pointer-events-none"></div>
+
+    <div class="relative z-10">
+      <h3 class="text-2xl md:text-3xl font-bold mb-4">
+        Building AI Agents
+      </h3>
+      <span class="inline-block bg-white bg-opacity-20 text-sm px-3 py-1 rounded-full mb-4">
+        Coming Soon
+      </span>
+      <p class="mb-2 text-gray-100 leading-relaxed">
+        Creating AI agents to automate bottleneck business processes — exploring inventory management, 
+        customer support automation, and personalized marketing workflows. 
+        These agents free up valuable resources and improve customer experiences.
       </p>
-      <!-- Possibly lists, paragraphs, images, etc. -->
-      <p class="mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim venenatis lorem at varius. 
-        Etiam quis tortor eget nunc ornare feugiat eget nec nulla. 
-      </p>
+
+    </div>
+  </section>
+
+  </div>
+</div>
+
+      <script>
+      // filepath: /Users/ashterhaider/Downloads/build/personal-site/ai-work.html
+      document.addEventListener('DOMContentLoaded', function() {
+        const mainImage = document.getElementById('mainImage');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const thumbnailStrip = document.getElementById('thumbnailStrip');
+        
+        // Create array with both JPG and PNG paths
+        const images = Array.from({length: 30}, (_, i) => {
+            const index = i + 1;
+            const jpgPath = `assets/images/AI/AI${index}.jpg`;
+            const pngPath = `assets/images/AI/AI${index}.png`;
+            
+            // Try loading both extensions
+            return new Promise(resolve => {
+                const img = new Image();
+                img.onload = () => resolve(jpgPath);
+                img.onerror = () => {
+                    const pngImg = new Image();
+                    pngImg.onload = () => resolve(pngPath);
+                    pngImg.onerror = () => resolve(null);
+                    pngImg.src = pngPath;
+                };
+                img.src = jpgPath;
+            });
+        });
+    
+        let currentIndex = 0;
+        let validImages = [];
+    
+        // Initialize slider after checking all images
+        Promise.all(images).then(checkedImages => {
+            validImages = checkedImages.filter(img => img !== null);
+            
+            // Create thumbnails
+            validImages.forEach((src, index) => {
+                const thumb = document.createElement('img');
+                thumb.src = src;
+                thumb.alt = `Thumbnail ${index + 1}`;
+                thumb.className = 'w-20 h-20 object-cover rounded cursor-pointer hover:opacity-75 transition-opacity';
+                thumb.onclick = () => {
+                    currentIndex = index;
+                    updateImage();
+                };
+                thumbnailStrip.appendChild(thumb);
+            });
+    
+            // Initialize first image
+            updateImage();
+        });
+    
+        function updateImage() {
+            mainImage.src = validImages[currentIndex];
+            thumbnailStrip.querySelectorAll('img').forEach((thumb, index) => {
+                thumb.className = `w-20 h-20 object-cover rounded cursor-pointer transition-opacity ${
+                    index === currentIndex ? 'ring-2 ring-blue-500' : 'hover:opacity-75'
+                }`;
+            });
+        }
+    
+        prevBtn.onclick = () => {
+            currentIndex = (currentIndex - 1 + validImages.length) % validImages.length;
+            updateImage();
+        };
+    
+        nextBtn.onclick = () => {
+            currentIndex = (currentIndex + 1) % validImages.length;
+            updateImage();
+        };
+    
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevBtn.click();
+            if (e.key === 'ArrowRight') nextBtn.click();
+        });
+    });
+      </script>
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="dark py-4 mt-8 border-t border-white dark:border-gray-100">
     <div class="max-w-6xl mx-auto px-4 text-sm text-gray-500">
-      © 2025 Ashter Haider. Built with php, tailwind, sqlite, html and jquery.
+      © 2025 Ashter Haider.
     </div>
   </footer>
   <script src="js/script.js"></script>

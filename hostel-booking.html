@@ -62,11 +62,6 @@
           class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >Resume</a
         >
-        <a
-          href="contact.html"
-          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >Contact</a
-        >
       </nav>
 
       <!-- Mobile Menu Trigger -->
@@ -134,12 +129,6 @@
           >
             Resume
           </a>
-          <a
-            href="contact.html"
-            class="py-2 px-3 text-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors"
-          >
-            Contact
-          </a>
         </div>
       </div>
 
@@ -163,44 +152,52 @@
         technologies used, challenges solved, and outcomes achieved.
       </p>
 
-      <!-- Additional Images -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <img 
-            src="assets/images/hostel_platform1.PNG" 
-            alt="Hostel Booking Platform Screenshot 1" 
-            class="rounded shadow w-full"
-          >
-        </div>
-        <div>
-          <img 
-            src="assets/images/hostel_platform2.PNG" 
-            alt="Hostel Booking Platform Screenshot 2" 
-            class="rounded shadow w-full"
-          >
-        </div>
-        <div>
-          <img 
-            src="assets/images/hostel_platform3.PNG" 
-            alt="Hostel Booking Platform Screenshot 3" 
-            class="rounded shadow w-full"
-          >
-        </div>
-        <div>
-          <img 
-            src="assets/images/hostel_platform4.PNG" 
-            alt="Hostel Booking Platform Screenshot 4" 
-            class="rounded shadow w-full"
-          >
-        </div>
-        <div>
-          <img 
-            src="assets/images/hostel_platform5.PNG" 
-            alt="Hostel Booking Platform Screenshot 5" 
-            class="rounded shadow w-full"
-          >
-        </div>
-      </div>
+<!-- Two-column grid with images arranged in a "tall-left, stack-right" pattern -->
+<div class="grid grid-cols-2 gap-6 auto-rows-auto">
+  <!-- First "tall" image in left column, spanning two rows -->
+  <div class="row-span-2">
+    <img 
+      src="assets/images/hostel_platform1.PNG" 
+      alt="Hostel Booking Platform Screenshot 1" 
+      class="rounded shadow"
+    >
+  </div>
+  <!-- First of the right-column images (top) -->
+  <div>
+    <img 
+      src="assets/images/hostel_platform5.PNG" 
+      alt="Hostel Booking Platform Screenshot 2" 
+      class="rounded shadow"
+    >
+  </div>
+  <!-- Second of the right-column images (bottom) -->
+  <div>
+    <img 
+      src="assets/images/hostel_platform3.PNG" 
+      alt="Hostel Booking Platform Screenshot 3" 
+      class="rounded shadow"
+    >
+  </div>
+
+  <!-- Second "tall" image in the left column (spanning two rows again) -->
+  <div class="row-span-2">
+    <img 
+      src="assets/images/hostel_platform4.PNG" 
+      alt="Hostel Booking Platform Screenshot 4" 
+      class="rounded shadow"
+    >
+  </div>
+  <!-- Right-column image for this second set -->
+  <div>
+    <img 
+      src="assets/images/hostel_platform2.PNG" 
+      alt="Hostel Booking Platform Screenshot 5" 
+      class="rounded shadow"
+    >
+  </div>
+</div>
+
+
 
       <!-- Back to Projects -->
       <div class="mt-8">
@@ -218,7 +215,7 @@
   <!-- Footer -->
   <footer class="dark py-4 mt-8 border-t border-white dark:border-gray-100">
     <div class="max-w-6xl mx-auto px-4 text-sm text-gray-500">
-      © 2025 Ashter Haider. Built with php, tailwind, sqlite, html and jquery.
+      © 2025 Ashter Haider.
     </div>
   </footer>
 
